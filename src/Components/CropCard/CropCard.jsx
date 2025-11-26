@@ -39,7 +39,7 @@ const CropCard = ({crop}) => {
     </p>
 
     {/* View Details Button */}
-    <Link href={`/detailed-post/${_id}`} className="mt-auto text-center bg-gradient-to-r from-[#166534] via-[#22C55E] to-[#A3E635] text-white font-medium py-2 rounded-lg hover:bg-green-600 transition">
+    <Link href={`/product/${_id}`} className="mt-auto text-center bg-gradient-to-r from-[#166534] via-[#22C55E] to-[#A3E635] text-white font-medium py-2 rounded-lg hover:bg-green-600 transition">
       View Details
     </Link>
   </div>
