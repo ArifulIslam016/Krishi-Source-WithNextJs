@@ -1,13 +1,14 @@
 "use client";
 import Footer from '@/Components/footer/footer';
 import Navbar from '@/Components/Navbar/Navbar';
+import Slider from '@/Components/Slider/Slider';
 import React, {  useContext } from 'react';
 
 const Page = () => { 
 
   return (
 <div>
-  <h1>This is navbar</h1>
+<Slider></Slider>
 </div>
   );
 };

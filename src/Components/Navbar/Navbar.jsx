@@ -9,11 +9,11 @@ const Navbar = () => {
     <>
       <li>
         {" "}
-        <Link href="">Add Produsts</Link>
+        <Link href="/addProducts">Add Produsts</Link>
       </li>
       <li>
         {" "}
-        <Link href="">Manage Product</Link>
+        <Link href="/manageProduct">Manage Product</Link>
       </li>
     </>
   );
