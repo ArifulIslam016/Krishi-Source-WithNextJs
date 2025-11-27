@@ -26,7 +26,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <AuthProvider>
-          <Navbar></Navbar>
+          <div className="sticky top-0">
+            {" "}
+            <Navbar></Navbar>
+          </div>
           <div className="grow">{children}</div>
           <Footer></Footer>
         </AuthProvider>

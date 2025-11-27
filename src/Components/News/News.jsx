@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import useSecureInstance from '../../Hooks/SecureInstance';
+
 import axios from 'axios';
+import useSecureInstance from '@/hooks/SecureInstance';
 
 const News = () => {
     const Instance=useSecureInstance()

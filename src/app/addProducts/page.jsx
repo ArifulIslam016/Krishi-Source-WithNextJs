@@ -4,6 +4,7 @@ import useSecureInstance from "@/hooks/SecureInstance";
 import { useRouter } from "next/navigation";
 import LoadingPage from '../../Components/Errors/LoadingPage'
 import React, { use,  } from "react";
+import Swal from "sweetalert2";
 
 const Addcrops = () => {
     const router=useRouter()
@@ -44,7 +45,10 @@ const Addcrops = () => {
     };
     Instance.post("/CreateCrops", newCrop).then((data) => {
         if(data.data.insertedId){
-    //   i will add allret here
+      Swal.fire({
+          title: "Added!",
+          text: "Your post has been sucseed.",
+          icon: "success"})
       e.target.reset()
         }
         
