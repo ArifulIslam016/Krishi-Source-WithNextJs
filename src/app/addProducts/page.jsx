@@ -7,6 +7,7 @@ import React, { use,  } from "react";
 import Swal from "sweetalert2";
 
 const Addcrops = () => {
+    
     const router=useRouter()
     const Instance = useSecureInstance();
     const { user,loading } = use(Authcontext);
@@ -178,3 +179,4 @@ const Addcrops = () => {
 };
 
 export default Addcrops;
+export const dynamic = 'force-dynamic';
