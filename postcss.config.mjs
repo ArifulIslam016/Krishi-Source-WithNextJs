@@ -1,7 +1,10 @@
-const config = {
+// postcss.config.mjs
+const postcssConfig = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    tailwindcss: {},
+    autoprefixer: {},
+    'postcss-preset-env': {}, // ✅ handles @property and other modern CSS
   },
 };
 
-export default config;
+export default postcssConfig;

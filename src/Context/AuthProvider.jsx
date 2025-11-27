@@ -19,7 +19,10 @@ return signInWithEmailAndPassword(auth,email,Password)
     return signInWithPopup(auth,googleProvider)
   }
   const Signout=()=>{
-    return signOut(auth)
+    return signOut(auth).then(()=>{
+              localStorage.setItem("isLoggedIn", JSON.stringify(false));
+
+    })
   }
   const updateUserProfile=(updatedinfo)=>{
     return updateProfile(auth.currentUser,updatedinfo)
@@ -29,8 +32,15 @@ return signInWithEmailAndPassword(auth,email,Password)
   const unsubscribe=  onAuthStateChanged(auth,(currentUser)=>{
         setUser(currentUser)
         setLoading(false)
+if(currentUser){
+            localStorage.setItem("isLoggedIn", JSON.stringify(true));
+
+}else{
+    localStorage.setItem("isLoggedIn", JSON.stringify(false));
+
+}
     })
-    return ()=> unsubscribe
+    return ()=> unsubscribe()
   },[])
     const userInfo={
         CreateUser,
