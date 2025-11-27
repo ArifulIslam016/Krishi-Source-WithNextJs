@@ -1,12 +1,20 @@
 'use client'
 import { Authcontext } from "@/Context/Context";
 import useSecureInstance from "@/hooks/SecureInstance";
-
+import { useRouter } from "next/navigation";
+import LoadingPage from '../../Components/Errors/LoadingPage'
 import React, { use,  } from "react";
 
 const Addcrops = () => {
-  const Instance = useSecureInstance();
-  const { user } = use(Authcontext);
+    const router=useRouter()
+    const Instance = useSecureInstance();
+    const { user,loading } = use(Authcontext);
+    if(loading){
+        return <LoadingPage></LoadingPage>
+    }
+    if(!user){
+        router.push('/login')
+    }
   const handleAddproducts = (e) => {
     e.preventDefault();
     const name = e.target.cropName.value;

@@ -18,6 +18,7 @@
     "react-hook-form": "^7.66.1",
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
+    "sweetalert2": "^11.26.3",
     "swiper": "^12.0.3"
   },
   "devDependencies": {
@@ -26,5 +27,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.4",
     "tailwindcss": "^4.1.17"
-  }
+  },
+  "browserslist": "> 1%"
 }
